@@ -1,0 +1,23 @@
+{
+  "name": "palindrome",
+  "version": "1.0.0",
+  "description": "Test palindromes",
+  "main": "app/palindrome.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holm0563/FridayFunProjects.git"
+  },
+  "author": "Derek Holmes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/holm0563/FridayFunProjects/issues"
+  },
+  "homepage": "https://github.com/holm0563/FridayFunProjects#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
