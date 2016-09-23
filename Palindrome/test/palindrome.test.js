@@ -33,10 +33,31 @@ describe('Palindrome', function() {
         });
     });
 
-    var test = 'a';
+    var test5 = 'a';
     describe('#Palindrome()', function() {
-        it(test+' should return true?', function() {
-            expect(sut.Palindrome(test)).to.be.true;
+        it(test5+' should return false', function() {
+            expect(sut.Palindrome(test5)).to.be.false;
+        });
+    });
+
+    var test6 = 'The sentence contains a racecar palindrome.';
+    describe('#ContainsPalindrome()', function() {
+        it(test6+' should return true', function() {
+            expect(sut.ContainsPalindrome(test6)).to.be.true;
+        });
+    });
+
+    var test7 = 'The sentence does not contain a palindrome.';
+    describe('#ContainsPalindrome()', function() {
+        it(test7+' should return false', function() {
+            expect(sut.ContainsPalindrome(test7)).to.be.false;
+        });
+    });
+
+    var test8 = null;
+    describe('#ContainsPalindrome()', function() {
+        it('null should return false', function() {
+            expect(sut.ContainsPalindrome(test8)).to.be.false;
         });
     });
 });
