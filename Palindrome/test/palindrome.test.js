@@ -35,7 +35,7 @@ describe('Palindrome', function() {
 
     var test = 'a';
     describe('#Palindrome()', function() {
-        it(test+' should return false', function() {
+        it(test+' should return true?', function() {
             expect(sut.Palindrome(test)).to.be.true;
         });
     });
