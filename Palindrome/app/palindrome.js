@@ -36,8 +36,13 @@
         return false;
     }
 
+    if (!exports){
+        exports = {};
+    }
 
     exports.Palindrome = Palindrome;
     exports.ContainsPalindrome = ContainsPalindrome;
-    
+
+    window.exports = exports;
+
 })(this);
