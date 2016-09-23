@@ -1,39 +1,43 @@
-var Palindrome = function(palindrome){
 
-    var testableString = palindrome.replace(/[^A-Z0-9]/ig, "").toLowerCase(); //removes special characters, spaces, etc.
+(function(exports) {
+    "use strict";
 
-    if (!palindrome || palindrome.length <= 1)
-    {
-        return false;
-    }
+    var Palindrome = function(palindrome){
 
-    var reversed = testableString.split('').reverse().join('');
+        var testableString = palindrome.replace(/[^A-Z0-9]/ig, "").toLowerCase(); //removes special characters, spaces, etc.
 
-    return testableString === reversed;
-}
-
-var ContainsPalindrome = function(palindrome){
-
-    if (!palindrome || palindrome.length <= 1)
-    {
-        return false;
-    }
-
-    var splitString = palindrome.split(' '); //removes special characters, spaces, etc.
-    var lp;
-
-    for(lp = 0; lp<splitString.length; lp++){
-
-        if (exports.Palindrome(splitString[lp])){
-            return true;
+        if (!palindrome || palindrome.length <= 1)
+        {
+            return false;
         }
+
+        var reversed = testableString.split('').reverse().join('');
+
+        return testableString === reversed;
     }
 
-    return false;
-}
+    var ContainsPalindrome = function(palindrome){
 
-if (exports)
-{
+        if (!palindrome || palindrome.length <= 1)
+        {
+            return false;
+        }
+
+        var splitString = palindrome.split(' '); //removes special characters, spaces, etc.
+        var lp;
+
+        for(lp = 0; lp<splitString.length; lp++){
+
+            if (exports.Palindrome(splitString[lp])){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
     exports.Palindrome = Palindrome;
     exports.ContainsPalindrome = ContainsPalindrome;
-}
+    
+})(this);
